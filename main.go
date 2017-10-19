@@ -78,7 +78,7 @@ func main() {
 			go func(v string, k string) {
 				secret := make(map[string]interface{})
 				secret["value"] = v
-				_, err = vaultClient.Logical().Write(k, secret)
+				_, err = vaultClient.Logical().Write(fmt.Sprintf("%v/%v", secretPath, k), secret)
 				if err != nil {
 					ch <- fmt.Sprintf("Could not add %v :%v", k, err.Error())
 				}
