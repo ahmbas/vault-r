@@ -81,6 +81,7 @@ func main() {
 				_, err = vaultClient.Logical().Write(fmt.Sprintf("%v/%v", secretPath, k), secret)
 				if err != nil {
 					ch <- fmt.Sprintf("Could not add %v :%v", k, err.Error())
+					return
 				}
 				ch <- fmt.Sprintf("Added %v to %v", k, secretPath)
 			}(v, k)
