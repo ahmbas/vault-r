@@ -31,7 +31,7 @@ func main() {
 		},
 		cli.StringFlag{
 			Name:        "file, f",
-			Value:       "/home/ahmedbashir/webapps/menaops_infra/puppet-roles-olx-dbzops/secrets.json",
+			Value:       "",
 			Usage:       "JSON file to upload. Should be in following format {\"<SECRET-NAME>\":\"<SECRET_VALUE>\", ...}",
 			Destination: &jsonPath,
 		},
