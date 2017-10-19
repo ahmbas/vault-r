@@ -37,7 +37,7 @@ func main() {
 		},
 		cli.StringFlag{
 			Name:        "host, H",
-			Value:       "",
+			Value:       "http://127.0.0.1:8200",
 			Usage:       "Vault host address. defaults http://127.0.0.1:8200",
 			Destination: &vaultHost,
 		},
